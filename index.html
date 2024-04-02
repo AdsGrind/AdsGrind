@@ -1,0 +1,498 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./output.css" />
+    <link rel="stylesheet" href="style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="icon" type="image/x-icon" href="./assets/image/favicon.ico" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://cdn.jsdelivr.net/npm/remixicon@4.2.0/fonts/remixicon.css"
+      rel="stylesheet"
+    />
+    <title>ADSGrind</title>
+  </head>
+  <body
+    class="font-[poppins] bg-gradient-to-br from-[#222831] to-[#393E46] w-full h-fit px-2"
+  >
+    <nav>
+      <div
+        class="flex w-full gap-2 px-4 py-2 justify-between pt-4 max-w-screen-2xl m-auto"
+      >
+        <div class="logo w-1/2 md:w-3/12 flex items-center">
+          <img
+            class="px-2 md:h-24 h-14"
+            src="./assets/image/AGLOGO.png"
+            alt="logo"
+          />
+        </div>
+        <div
+          class="flex px-2 w-9/12 gap-5 justify-end lg:justify-between max-w-[1000px]"
+        >
+          <ul class="hidden lg:flex gap-3 justify-evenly w-9/12 items-center">
+            <li>
+              <a
+                class="text-[#EEEEEE] hover:rounded-full hover:text-white hover:bg-[#1abc9cca] px-4 py-2"
+                href="#about"
+                >About</a
+              >
+            </li>
+            <li>
+              <a
+                class="text-[#EEEEEE] hover:rounded-full hover:text-white hover:bg-[#1abc9cca] px-3 py-1.5"
+                href="#services"
+                >Services</a
+              >
+            </li>
+            <li>
+              <a
+                class="text-[#EEEEEE] hover:rounded-full hover:text-white hover:bg-[#1abc9cca] px-3 py-1.5"
+                href="#advertisers"
+                >Advertisers</a
+              >
+            </li>
+            <li>
+              <a
+                class="text-[#EEEEEE] hover:rounded-full hover:text-white hover:bg-[#1abc9cca] px-3 py-1.5"
+                href="#publishers"
+                >Publishers</a
+              >
+            </li>
+            <li>
+              <a
+                class="text-[#EEEEEE] hover:rounded-full hover:text-white hover:bg-[#1abc9cca] px-3 py-1.5"
+                href="#contact"
+                >Contact</a
+              >
+            </li>
+          </ul>
+          <div class="hidden md:flex gap-4 justify-between items-center">
+            <button
+              class="bg-[#1abc9c] text-white rounded-full w-24 h-10 hover:bg-[#1abc9cca]"
+            >
+              Signup
+            </button>
+            <button
+              class="bg-[#1abc9c] text-white rounded-full w-24 h-10 hover:bg-[#1abc9cca]"
+            >
+              Login
+            </button>
+          </div>
+          <div class="menubtn flex justify-between items-center lg:hidden">
+            <button
+              onclick="openSidebar()"
+              class="hover:scale-125 hover:ease-in-out hover:duration-200"
+            >
+              <img class="h-7" src="assets/svg/menu_white.svg" alt="" />
+            </button>
+          </div>
+        </div>
+      </div>
+      <div
+        class="sidebar backdrop-blur-3xl pt-8 text-white hidden flex-col gap-6 p-5 h-screen z-50 fixed top-0 right-0 min-w-72"
+      >
+        <div class="closebtn py-1.5 px-3 flex justify-between items-center">
+          <button
+            onclick="closeSidebar()"
+            class="hover:scale-125 hover:ease-in-out hover:duration-200"
+          >
+            <img class="h-7" src="assets/svg/close_white_24dp.svg" alt="" />
+          </button>
+        </div>
+        <ul class="flex flex-col gap-6 min-h-[50vh]">
+          <li class="w-full hover:bg-[#1abc9c] py-1.5 px-3 rounded-md">
+            <a href="#">About</a>
+          </li>
+          <li class="w-full hover:bg-[#1abc9c] py-1.5 px-3 rounded-md">
+            <a href="#services">Services</a>
+          </li>
+          <li class="w-full hover:bg-[#1abc9c] py-1.5 px-3 rounded-md">
+            <a href="#">Advertisers</a>
+          </li>
+          <li class="w-full hover:bg-[#1abc9c] py-1.5 px-3 rounded-md">
+            <a href="#">Publishers</a>
+          </li>
+          <li class="w-full hover:bg-[#1abc9c] py-1.5 px-3 rounded-md">
+            <a href="#contact">Contact</a>
+          </li>
+        </ul>
+        <div class="flex gap-4 justify-center">
+          <button
+            class="bg-[#1abc9c] text-white rounded-full w-24 h-10 hover:bg-[#1abc9cca]"
+          >
+            Signup
+          </button>
+          <button
+            class="bg-[#1abc9c] text-white rounded-full w-24 h-10 hover:bg-[#1abc9cca]"
+          >
+            Login
+          </button>
+        </div>
+      </div>
+    </nav>
+    <main
+      class="w-full pt-8 2xl:pt-32 max-w-screen-2xl m-auto flex flex-col gap-10"
+    >
+      <div
+        class="hero flex flex-col-reverse md:flex-row items-center w-full h-[380px] lg:h-80 xl:h-96"
+      >
+        <div
+          class="w-full lg:w-7/12 md:px-4 px-1 sm:max-w-[500px] md:max-w-[600px] max-w-[400px] mx-auto p-0.5 lg:min-w-[700px]"
+        >
+          <h1
+            class="lg:text-5xl md:text-4xl sm:text-3xl text-2xl text-center font-semibold text-[#EEEEEE] md:leading-normal lg:leading-normal sm:leading-normal leading-normal md:pt-20 pt-5"
+          >
+            Unleash your brand's full potential with
+            <span
+              class="bg-[#1abc9c] text-[#222831] px-3 py-1 cursor-pointer rounded-2xl"
+              >AdsGrind</span
+            >
+            advertising solution
+          </h1>
+        </div>
+        <div
+          class="pt-12 lg:w-5/12 max-w-80 md:w-96 md:px-4 px-1 md:max-w-[700px] mx-auto p-0.5"
+        >
+          <img src="./assets/svg/mindset.svg" alt="" />
+        </div>
+      </div>
+      <div
+        class="infinite-scroll pt-4 2xl:pt-20 text-center text-[#EEEEEE] w-full items-end"
+      >
+        <div class="w-full">
+          <h2
+            class="text-xl pt-2 font-semibold md:text-2xl text-[#1abc9c] lg:text-3xl"
+          >
+            Our Featured Clients
+          </h2>
+          <p class="p-1 md:text-xl opacity-80">We win when our customer wins</p>
+          <div class="logos h-10 p-2 my-2 bg rounded-full">
+            <div class="logos-slide gap-7 md:gap-14 lg:gap-36">
+              <img src="./assets/svg/kfc-1.svg" />
+              <img src="./assets/svg/kfc-2.svg" />
+              <img src="./assets/svg/burger-king-9.svg" />
+              <img src="./assets/svg/mcdonalds-1.svg" />
+              <img src="./assets/svg/mcdonalds-2.svg" />
+              <img src="./assets/svg/spotify-logo.svg" />
+              <img src="./assets/svg/bajaj-finserv.svg" />
+              <img src="./assets/svg/kfc-1.svg" />
+              <img src="./assets/svg/kfc-2.svg" />
+              <img src="./assets/svg/burger-king-9.svg" />
+              <img src="./assets/svg/mcdonalds-1.svg" />
+              <img src="./assets/svg/mcdonalds-2.svg" />
+              <img src="./assets/svg/spotify-logo.svg" />
+              <img src="./assets/svg/bajaj-finserv.svg" />
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+    <section
+      id="about"
+      class="pt-6 text-[#EEEEEE] py-4 px-2 w-full md:flex items-center justify-around max-w-screen-2xl m-auto pb-6"
+    >
+      <img
+        class="py-4 min-w-[300px]"
+        src="assets/svg/users_per_minute.svg"
+        alt=""
+      />
+      <div class="about-info m-auto max-w-2xl min-w-72">
+        <h3 class="text-[#1abc9c] text-4xl font-semibold py-4">
+          About AdsGrind
+        </h3>
+        <p class="text-justify p-2 m-auto">
+          Welcome to AdsGrind, a leading advertising company specializing in
+          driving results through targeted CPI (Cost Per Install), CPR (Cost per
+          Registration) and CPA (Cost Per Action) campaigns. Our innovative
+          strategies and cutting-edge technology enable businesses to maximize
+          their reach, increase user acquisition, and optimize their return on
+          investment.
+        </p>
+      </div>
+    </section>
+    <section id="services" class="max-w-screen-2xl m-auto">
+      <h2 class="text-[#1abc9c] text-center text-4xl font-semibold py-4">
+        Our Services
+      </h2>
+      <div
+        class="h-[580px] max-w-screen-2xl m-auto justify-between py-6 text-[#EEEEEE] border-solid border-white border-2 rounded-lg relative overflow-hidden transition-all"
+      >
+        <div
+          class="slide flex flex-col lg:flex-row px-4 gap-5 absolute w-full transition-all duration-500"
+        >
+          <img
+            src="assets/svg/undraw_setup_analytics_re_foim.svg"
+            class="md:max-h-[500px] sm:max-h-[280px] md:w-1/2 p-6 m-auto slideImage"
+          />
+          <div
+            class="flex flex-col justify-center items-center md:items-start content p-4 lg:w-1/2"
+          >
+            <h2
+              class="lg:text-7xl md:text-5xl text-4xl pt-4 font-semibold tracking-wide uppercase text-[#1abc9c]"
+            >
+              Affiliate Marketing
+            </h2>
+            <p class="md:text-xl py-2">
+              AdsGrind offers a symbiotic relationship between advertisers and
+              affiliates.
+            </p>
+          </div>
+        </div>
+        <div
+          class="slide flex flex-col lg:flex-row px-4 gap-5 absolute w-full transition-all duration-500"
+        >
+          <img
+            src="assets/svg/undraw_web_developer_re_h7ie.svg"
+            class="max-h-[500px] md:w-1/2 p-4 m-auto"
+          />
+          <div
+            class="flex flex-col justify-center items-center md:items-start content p-4 lg:w-1/2"
+          >
+            <h2
+              class="lg:text-7xl md:text-5xl text-4xl pt-4 font-semibold tracking-wide uppercase text-[#1abc9c]"
+            >
+              SEO
+            </h2>
+            <p class="md:text-xl py-2">
+              We have experienced professionals who use the latest techniques
+              and strategies to improve your website’s SEO
+            </p>
+          </div>
+        </div>
+        <div
+          class="slide flex flex-col lg:flex-row px-4 gap-5 absolute w-full transition-all duration-500"
+        >
+          <img
+            src="assets/svg/undraw_pair_programming_re_or4x.svg"
+            class="max-h-[500px] md:w-1/2 p-4 m-auto"
+          />
+          <div
+            class="flex flex-col justify-center items-center md:items-start content p-4 lg:w-1/2"
+          >
+            <h2
+              class="lg:text-7xl md:text-5xl text-4xl pt-4 font-semibold tracking-wide uppercase text-[#1abc9c]"
+            >
+              SMO
+            </h2>
+            <p class="md:text-xl py-2">
+              We offer some of the cheapest social media marketing services,
+              making it accessible to small and medium-sized businesses.
+            </p>
+          </div>
+        </div>
+        <div
+          class="slide flex flex-col lg:flex-row px-4 gap-5 absolute w-full transition-all duration-500"
+        >
+          <img
+            src="assets/svg/undraw_web_search_re_efla.svg"
+            class="max-h-[500px] md:w-1/2 p-4 m-auto"
+          />
+          <div
+            class="flex flex-col justify-center items-center md:items-start content p-4 lg:w-1/2"
+          >
+            <h2
+              class="lg:text-7xl md:text-5xl text-4xl pt-4 font-semibold tracking-wide uppercase text-[#1abc9c]"
+            >
+              Pay Per Click
+            </h2>
+            <p class="md:text-xl py-2">
+              One of the key advantages of choosing AdsGrind as your social
+              media marketing partner is our affordability
+            </p>
+          </div>
+        </div>
+        <div
+          class="slide flex flex-col lg:flex-row px-4 gap-5 absolute w-full transition-all duration-500"
+        >
+          <img
+            src="assets/svg/undraw_web_developer_re_h7ie.svg"
+            class="max-h-[500px] md:w-1/2 p-4 m-auto"
+          />
+          <div
+            class="flex flex-col justify-center items-center md:items-start content p-4 lg:w-1/2"
+          >
+            <h2
+              class="lg:text-7xl md:text-5xl text-4xl pt-4 font-semibold tracking-wide uppercase text-[#1abc9c]"
+            >
+              Web Designing
+            </h2>
+            <p class="md:text-xl py-2">
+              We use the latest tools and technologies to help you achieve your
+              goals, and we’re always looking for new and innovative ways to
+              help you succeed.
+            </p>
+          </div>
+        </div>
+        <button
+          onclick="goPrev()"
+          class="bg-[#1abc9c] m-auto rounded-full h-12 w-12 hover:bg-[#15ab8d] absolute top-1/2 left-0 ml-4"
+        >
+          <i class="ri-arrow-left-s-line text-3xl"></i>
+        </button>
+        <button
+          onclick="goNext()"
+          class="bg-[#1abc9c] m-auto rounded-full h-12 w-12 hover:bg-[#15ab8d] absolute top-1/2 right-0 mr-4"
+        >
+          <i class="ri-arrow-right-s-line text-3xl"></i>
+        </button>
+      </div>
+    </section>
+    <section id="contact" class="container max-w-screen-2xl m-auto my-6">
+      <span class="big-circle"></span>
+      <img src="./assets/image/shape.png" class="square" alt="" />
+      <div class="form">
+        <div class="contact-info">
+          <h3 class="title">Let's get in touch</h3>
+          <p class="text">
+            Do you have a question or feedback? Feel free to reach out to
+            DangleAds and the support team will be actively present for your
+            assistance.
+          </p>
+
+          <div class="info">
+            <div class="information">
+              <img src="./assets/image/location.png" class="icon" alt="" />
+              <p>Rohini, Delhi, 110085</p>
+            </div>
+            <div class="information">
+              <img src="./assets/image/email.png" class="icon" alt="" />
+              <p><a href="mailto:admin@adsgrind.com">admin@adsgrind.com</a></p>
+            </div>
+            <div class="information">
+              <img src="./assets/image/phone.png" class="icon" alt="" />
+              <p><a href="tel:+918882643942">+91 88826 43942</a></p>
+            </div>
+          </div>
+
+          <div class="social-media">
+            <p>Connect with us :</p>
+            <div class="social-icons">
+              <a href="#">
+                <i class="ri-facebook-line"></i>
+              </a>
+              <a href="#">
+                <i class="ri-linkedin-line"></i>
+              </a>
+              <a href="#">
+                <i class="ri-instagram-line"></i>
+              </a>
+              <a href="#">
+                <i class="ri-twitter-line"></i>
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <div class="contact-form">
+          <span class="circle one"></span>
+          <span class="circle two"></span>
+
+          <form action="index.html" autocomplete="off" method="post" id="form">
+            <h3 class="title">Contact us</h3>
+            <div class="input-container">
+              <input type="text" name="name" class="input" required />
+              <label for="">Name</label>
+              <span>Name</span>
+            </div>
+            <div class="input-container">
+              <input
+                type="email"
+                name="email"
+                class="input"
+                required
+                autocomplete="off"
+              />
+              <label for="">Email</label>
+              <span>Email</span>
+            </div>
+            <div class="input-container">
+              <input type="tel" name="phone" class="input" />
+              <label for="">Phone</label>
+              <span>Phone</span>
+            </div>
+            <div class="input-container textarea">
+              <textarea name="message" class="input"></textarea>
+              <label for="">Message</label>
+              <span>Message</span>
+            </div>
+            <button type="submit" value="Send" name="btn" class="btn">
+              Send
+            </button>
+          </form>
+        </div>
+      </div>
+    </section>
+    <footer
+      class="max-w-screen-2xl m-auto pt-6 flex flex-col justify-center items-center text-white"
+    >
+      <div class="flex w-11/12 justify-around py-2 items-center gap-5">
+        <img src="assets/image/AGLOGO.png" class="h-16" />
+        <ul class="flex gap-5 py-4">
+          <li
+            class="hover:bg-[#1abc9c] h-7 w-7 text-center rounded-full bg-[#393E46]"
+          >
+            <a href=""
+              ><i
+                class="ri-facebook-line hover:text-white text-xl text-[#1abc9c]"
+              ></i
+            ></a>
+          </li>
+          <li
+            class="hover:bg-[#1abc9c] h-7 w-7 text-center rounded-full bg-[#393E46]"
+          >
+            <a href=""
+              ><i
+                class="ri-linkedin-line hover:text-white text-xl text-[#1abc9c]"
+              ></i
+            ></a>
+          </li>
+          <li
+            class="hover:bg-[#1abc9c] h-7 w-7 text-center rounded-full bg-[#393E46]"
+          >
+            <a href=""
+              ><i
+                class="ri-instagram-line hover:text-white text-xl text-[#1abc9c]"
+              ></i
+            ></a>
+          </li>
+          <li
+            class="hover:bg-[#1abc9c] h-7 w-7 text-center rounded-full bg-[#393E46]"
+          >
+            <a href=""
+              ><i
+                class="ri-twitter-line hover:text-white text-xl text-[#1abc9c]"
+              ></i
+            ></a>
+          </li>
+        </ul>
+      </div>
+      <ul class="flex gap-6 flex-wrap justify-center px-4 py-2 leading-3">
+        <li class="hover:text-[#1abc9c]"><a href="#about">About</a></li>
+        <li class="hover:text-[#1abc9c]"><a href="">Privacy Policy</a></li>
+        <li class="hover:text-[#1abc9c]"><a href="">Terms & Conditions</a></li>
+        <li class="hover:text-[#1abc9c]"><a href="#contact">Contact us</a></li>
+        <li class="hover:text-[#1abc9c]"><a href="">FAQs</a></li>
+      </ul>
+      <h5 class="p-4">&copy;2024 AdsGrind All rights reserved.</h5>
+    </footer>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"
+      integrity="sha512-7eHRwcbYkK4d9g/6tD/mhkf++eoTHwpNM9woBxtPUBWm67zeAfFC+HrdoE2GanKeocly/VxeLvIqwvCdk7qScg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"
+      integrity="sha512-onMTRKJBKz8M1TnqqDuGBlowlH0ohFzMXYRNebz+yOcc5TQr/zAKsthzhuv0hiyUKEiQEQXEynnXCvNTOk50dg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+    <script src="app.js"></script>
+  </body>
+</html>
